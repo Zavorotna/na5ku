@@ -1,0 +1,217 @@
+doctype html
+html(lang="uk")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        link(rel="shortcut icon", href="img/logo.png", type="image/png")
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        link(rel="stylesheet", href="css/styles.css")
+
+        title na5ku - Дипломні, курсові, реферати та інші студентські роботи.
+    body 
+        .dark-bgc
+        include components/mixin
+        include components/popup_img
+        include components/header 
+        main 
+            section.main_container.wrapper.flex-between.items-center 
+                .text_container 
+                    h1 Дипломні, курсові, реферати та інші студентські роботи.
+                    p Без ризику, без нервів та без затримок
+                    ul
+                        li.flex.items-center.gap 
+                            picture 
+                                img(src="img/main_container_icon.png", alt="")
+                            span Всі 
+                                b роботи перевіряються 
+                                | на відповідність вимогам ВНЗ, ДСТУ і нормам Антиплагіату
+                        li.flex.items-center.gap 
+                            picture 
+                                img(src="img/main_container_icon_2.png", alt="")
+                            span 
+                                b Ви самі визначаєте "дедлайн"
+                                | - беремося, тільки, якщо гарантовано зробимо вчасно
+                        li.flex.items-center.gap
+                            picture 
+                                img(src="img/main_container_icon_3.png", alt="")
+                            span 
+                                b Безкоштовні правки 
+                                | і доопрацювання у відповідності з початковим завданням
+                    .green_btn 
+                        a(href="#") розрахувати вартість
+                .img_container 
+                    picture 
+                        img(src="img/main.png", alt="")
+            section.rating_container.wrapper.grid.grid_rating.gap
+                h2 Експертність, яку визнали вже понад 200 000 студентів 
+                .ratings.grid.col_3.items-center 
+                    .na5ku_block.flex.gap.items-center
+                        picture 
+                            img(src="img/rat_logo.png", alt="")
+                        .rating 
+                            p Відгуки клієнтів
+                            .flex.gap.items-center 
+                                picture 
+                                    img(src="img/rat_star.png", alt="")
+                                span (4,9)
+                    .google_block.flex.gap.items-center
+                        picture 
+                            img(src="img/google_logo.png", alt="")
+                        .rating 
+                            p Google Maps
+                            .flex.gap.items-center 
+                                picture 
+                                    img(src="img/rat_star.png", alt="")
+                                span (4,6)
+                    .student_block.flex.gap.items-center
+                        picture 
+                            img(src="img/student_guide.png", alt="")
+                        .rating 
+                            p Studentguide
+                            .flex.gap.items-center 
+                                picture 
+                                    img(src="img/rat_star.png", alt="")
+                                span (4,7)
+            div.about_us_container.wrapper.grid
+                .left_block 
+                    .item_about.grid.col_2.gap 
+                        picture 
+                            img(src="img/section_2_1.svg", alt="")
+                        p Презентація та промова до дипломної роботи - 
+                            b в подарунок. 
+                            | Розстрочка МОНО від 5000 грн.
+                    .item_about.grid.col_2.gap 
+                        picture 
+                            img(src="img/section_2_2.svg", alt="")
+                        p 
+                            b Понад 1000 експертів. 
+                            | Підберемо ідеального виконавця для вашого завдання, а у випадку форс-мажору безболісно знайдемо йому заміну
+                    .item_about.grid.col_2.gap 
+                        picture 
+                            img(src="img/section_2_3.svg", alt="")
+                        p Завжди на зв’язку. Приймаємо та 
+                            b оцінюємо замовлення цілодобово 
+                            | та без вихідних. Оцінка замовлень - від до 2 хв
+                .img_block.justify-center
+                    picture 
+                        img(src="img/nasta-ok.png", alt="")
+                .right_block
+                    .item_about.grid.col_2_reverce.gap 
+                        p План для затвердження з науковим керівником для курсової або дипломної - 
+                            b безкоштовно
+                        picture 
+                            img(src="img/section_2_4.svg", alt="")
+                    .item_about.grid.col_2_reverce.gap 
+                        p 
+                            b Один персональний менеджер 
+                            | супроводжуватиме вас до успішної здачі протягом всіх замовлень та вирішить будь-які питання
+                        picture 
+                            img(src="img/section_2_5.svg", alt="")
+                    .item_about.grid.col_2_reverce.gap 
+                        p Зручний 
+                            b особистий кабінет 
+                            | для відстеження статусу замовлень, спілкування та оплати. Бонуси за запрошення друзів.
+                        picture 
+                            img(src="img/section_2_6.svg", alt="")
+            section.info_block.green_bg 
+                .wrapper.flex-between.items-center.gap
+                    h3 Щоб дізнатися точну вартість роботи - оформіть замовлення самостійно або напишіть нам у зручному для вас месенджері
+                    picture 
+                        img(src="img/right-arrow.svg", alt="")
+                    .social_container 
+                        .green_btn 
+                            a(href="#") оформити замовлення
+                        ul.social.flex-between.items-center 
+                            li.social_items
+                                a(href="#")
+                            li.social_items
+                                a(href="#")
+                            li.social_items
+                                a(href="#")
+
+            section.price_container.wrapper
+                h2 Ціни 
+                .grid.col_4 
+                    +cards(cardPrice.dyplomni)
+                    +cards(cardPrice.cursovi)      
+                    +cards(cardPrice.referaty)
+                    +cards(cardPrice.dysertacii)
+                .price_btn_container 
+                    .grid.col_4.justify-center
+                        a(href="") 
+                            span Звіти з практики
+                            span від 
+                                b 1000 
+                                | грн
+                        a(href="") 
+                            span Практичні роботи
+                            span від 
+                                b 300 
+                                | грн
+                        a(href="") 
+                            span Лабораторні роботи
+                            span від 
+                                b 350 
+                                | грн
+                        a(href="") 
+                            span Наукові статті
+                            span від 
+                                b 1000 
+                                | грн
+                    .grid.col_3.justify-center
+                        a(href="") 
+                            span Есе
+                            span від 
+                                b 250 
+                                | грн
+                        a(href="") 
+                            span Контрольні роботи
+                            span від 
+                                b 150 
+                                | грн
+                        a(href="") 
+                            span Рішення задач
+                            span від 
+                                b 110 
+                                | грн
+                .green_btn 
+                    a(href="#") дізнатися точну вартість
+            include components/step
+            section.reviews_container.wrapper
+                h2 Відгуки
+                .comment-slider.slider-comment#commentSlider
+                    .comment-block.flex.slider-container.items-center
+                        .comment-card
+                            .img-comment
+                                picture
+                                    img(src="img/comment1.png" alt="")
+                        .comment-card
+                            .img-comment
+                                picture
+                                    img(src="img/comment2.png" alt="")
+                        .comment-card
+                            .img-comment
+                                picture
+                                    img(src="img/comment3.png" alt="")
+                        .comment-card
+                            .img-comment
+                                picture
+                                    img(src="img/comment4.png" alt="")
+                        .comment-card
+                            .img-comment
+                                picture
+                                    img(src="img/comment1.png" alt="")
+                p 
+                    a(href="") Більше відгуків
+                .flex.justify-center.items-center.gap 
+                    .green_btn 
+                        a(href="#") дізнатися вартість
+                    .button.transparent_btn 
+                        a(href="#") оформити замовлення
+            section.info_container.wrapper.container#info
+                h2 FAQ
+                include components/information
+        include components/footer
+        script(src="js/scripts.js") 

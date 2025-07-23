@@ -1,0 +1,190 @@
+@import components/mixins
+@import components/header
+@import components/info
+@import components/step
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 0.9px
+    +media(768)
+        font-size: 1px  
+
+body
+    color: #333
+    font-size: 14rem
+    font-family: Montserrat
+
+
+ul
+    list-style: none
+a
+    color: #333
+    text-decoration: none
+
+h1, h2
+    font-size: 32px
+    font-weight: 600
+h2
+    font-weight: 500
+
+.flex
+    display: flex
+
+.flex-between
+    display: flex
+    justify-content: space-between
+
+.justify-center
+    display: flex
+    justify-content: center
+
+.items-center
+    align-items: center
+
+.gap
+    gap: 20rem
+
+.gap-10
+    gap: 10rem  
+
+.gap_50
+    gap: 50rem  
+
+.grid   
+    display: grid
+
+.col_2
+    grid-template-columns: 20% 70%
+.col_2_reverce
+    grid-template-columns: 70% 20%
+.col_3
+    +media(768)
+        justify-content: center
+        grid-template-columns: repeat(2, 1fr)
+    +media(1024)
+        grid-template-columns: repeat(3, 1fr)
+
+.col_4
+    +media(768)
+        justify-content: center
+        grid-template-columns: repeat(2, 1fr)
+    +media(1024)
+        grid-template-columns: repeat(4, 1fr)
+
+.wrapper
+    max-width: 1140px
+    margin: 0 auto
+    padding: 0 15px
+
+.main_container
+    flex-wrap: wrap
+    padding-bottom: 50px
+    +media(768)
+        flex-wrap: nowrap
+    img
+        max-width: 100%
+        height: auto
+    p
+        padding: 7px 0 39px
+        font-size: 16px
+        font-weight: 600
+    li
+        padding-bottom: 16px
+.text_container
+    +media(768)
+        max-width: 50%
+    +media(1024)
+        max-width: 560px
+    ul
+        padding-bottom: 40rem
+    picture
+        display: block
+        width: 100%
+        max-width: 30px
+        height: auto
+
+.green_btn
+    a
+        display: block
+        text-align: center
+        max-width: 280px
+        font-weight: 700
+        border-radius: 48px
+        background: #B2F110
+        text-transform: uppercase
+        padding: 16px 32px
+
+.grid_rating
+    padding-bottom: 50px
+    +media(768)
+        grid-template-columns: 20% 80%
+    h2
+        position: relative
+        text-align: center
+        font-size: 16px
+        padding-bottom: 20px
+        &::before
+            content: ''
+            position: absolute
+            top: -25%
+            left: 50%
+            width: 70px
+            height: 24px
+            transform: translate(-50%, -50%)
+            background-image: url(../img/stars_circle.png)
+
+.ratings
+    padding: 19px 0
+    border-top: 1px solid #e5e5e5
+    border-bottom: 1px solid #e5e5e5
+    > div
+        +media(768)
+            justify-content: center
+        picture
+            width: 110px
+            height: auto
+            +media(768)
+                width: auto
+    p
+        font-weight: 700
+
+.student_block
+    +media(768)
+        grid-column: span 2
+    +media(1024)
+        grid-column: span 1
+.about_us_container
+    +media(500)
+        grid-template-columns: 2fr 1fr 2fr
+.item_about
+    align-items: center
+    padding-bottom: 30rem
+    p
+        padding: 20rem
+        border-radius: 20rem
+        border: 1px solid #d6d6d6
+
+.green_bg
+    padding: 50px 0
+    background: linear-gradient(90deg, #0A662D 0%, #163F2E 100%)
+    h3
+        max-width: 660px
+        color: #FFF
+        font-size: 20px
+        font-weight: 600
+    > div
+        justify-content: center
+        flex-wrap: wrap
+        +media(768)
+            justify-content: space-between
+            flex-wrap: nowrap
+    picture
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        max-width: 100px

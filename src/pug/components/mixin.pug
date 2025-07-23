@@ -1,0 +1,77 @@
+-
+    let cardPrice = {
+        dyplomni: {
+            img: "img/price_1.png",
+            alt: 'Дипломні роботи',
+            title: "Дипломні роботи",
+            time: '3-14 днів',
+            expert: "рівень освіти не нижче магістра, переважно аспіранти та доктора наук",
+            fix: "1 місяць",
+            material: "план, презентація, промова, звіт про унікальність",
+            price: '4900',
+            cta: 'Замовити',
+            href: '#',
+        },
+        cursovi: {
+            img: "img/price_2.png",
+            alt: 'Курсові роботи',
+            title: "Курсові роботи",
+            time: '1-10 днів',
+            expert: "рівень освіти не нижче магістра, переважно аспіранти",
+            fix: "1 місяць",
+            material: "план, презентація, промова, звіт про унікальність",
+            price: '990',
+            cta: 'Замовити',
+            href: '#',
+        },
+        referaty: {
+            img: "img/price_3.png",
+            alt: 'Реферати',
+            title: "Реферати",
+            time: 'від 1 дня',
+            expert: "рівень освіти не нижче бакалавра, переважно магістри",
+            fix: "1 місяць",
+            material: "план, презентація, промова, звіт про унікальність",
+            price: '300',
+            cta: 'Замовити',
+            href: '#',
+        },
+        dysertacii: {
+            img: "img/price_4.png",
+            alt: 'Дисертації',
+            title: "Дисертації",
+            time: 'від 150 днів',
+            expert: "доктор наук",
+            fix: "1 місяць",
+            material: "план, обгрунтування, аспірантський реферат, наукові статті, монографії тощо",
+            price: '60000',
+            cta: 'Замовити',
+            href: '#',
+        }
+    }
+
+mixin cards(card)
+    figure.card 
+        figcaption
+            picture 
+                img(src=card.img, alt=card.alt)
+            .card_content 
+                h3= card.title
+                p.time 
+                    b Термін виконання:  
+                    | #{card.time}
+                p.expert 
+                    b Експерт: 
+                    | #{card.expert}
+                p.fix 
+                    b Безкоштовні правки: 
+                    | #{card.fix}
+                p.material 
+                    b Безкоштовні матеріали: 
+                    | #{card.material}
+                .price_container 
+                    span.price від
+                        b #{card.price}
+                        | грн
+                a(href=card.href, class="button green_btn")= card.cta
+
