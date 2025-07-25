@@ -176,7 +176,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    window.addEventListener('DOMContentLoaded', handleResponsiveSteps);
+    handleResponsiveSteps();
+    activateStep("1");
+
     window.addEventListener('resize', handleResponsiveSteps);
 
 
