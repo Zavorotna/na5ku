@@ -52,7 +52,10 @@ header
     a
         display: block
         text-decoration: underline
-
+        transition: all 0.5s ease
+        &:hover
+            color: #80C936
+            text-shadow: 0 0 1px #80C936
 li.cancel_li
     +media(1024)
         display: none
@@ -68,6 +71,11 @@ li.cancel_li
         text-transform: uppercase
         border-radius: 48px
         border: 1px solid #F99B38
+        transition: all 0.5s ease
+        &:hover
+            color: #333
+            background-color: #B2F110
+            border-color: #B2F110
     
 .burger 
     width: 50px

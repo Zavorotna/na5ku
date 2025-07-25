@@ -10,7 +10,7 @@
             material: "план, презентація, промова, звіт про унікальність",
             price: '4900',
             cta: 'Замовити',
-            href: '#',
+            href: 'https://na5ku.com.ua/uk/diplomnie-raboti/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-diporder#ctfrm',
         },
         cursovi: {
             img: "img/price_2.png",
@@ -22,7 +22,7 @@
             material: "план, презентація, промова, звіт про унікальність",
             price: '990',
             cta: 'Замовити',
-            href: '#',
+            href: 'https://na5ku.com.ua/uk/kursovie/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-kursorder#ctfrm',
         },
         referaty: {
             img: "img/price_3.png",
@@ -34,7 +34,7 @@
             material: "план, презентація, промова, звіт про унікальність",
             price: '300',
             cta: 'Замовити',
-            href: '#',
+            href: 'https://na5ku.com.ua/uk/referat/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-reforder#ctfrm',
         },
         dysertacii: {
             img: "img/price_4.png",
@@ -46,7 +46,7 @@
             material: "план, обгрунтування, аспірантський реферат, наукові статті, монографії тощо",
             price: '60000',
             cta: 'Замовити',
-            href: '#',
+            href: 'https://na5ku.com.ua/uk/napisanie-dissertacij/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-disorder#ctfrm',
         }
     }
 
@@ -69,9 +69,10 @@ mixin cards(card)
                 p.material 
                     b Безкоштовні матеріали: 
                     | #{card.material}
-                .price_container 
+                .price_container_card 
                     span.price від
                         b #{card.price}
                         | грн
-                a(href=card.href, class="button green_btn")= card.cta
+                .green_btn
+                    a(href=card.href, class="button")= card.cta
 

@@ -10,6 +10,7 @@
 
 html
     font-size: 0.9px
+    scroll-behavior: smooth
     +media(768)
         font-size: 1px  
 
@@ -78,7 +79,7 @@ h2
 .wrapper
     max-width: 1140px
     margin: 0 auto
-    padding: 0 15px
+    padding: 0 25px
 
 .main_container
     flex-wrap: wrap
@@ -111,12 +112,18 @@ h2
     a
         display: block
         text-align: center
-        max-width: 280px
+        margin: 0 auto
         font-weight: 700
         border-radius: 48px
         background: #B2F110
         text-transform: uppercase
+        transition: all 0.5s ease
         padding: 16px 32px
+        &:hover
+            color: #fff
+            background-color: #F99B38
+        +media(768)
+            max-width: 280px
 
 .grid_rating
     padding-bottom: 50px
@@ -167,7 +174,18 @@ h2
         padding: 20rem
         border-radius: 20rem
         border: 1px solid #d6d6d6
-
+.social_container 
+    ul
+        padding-top: 20px
+.social_items
+    a
+        display: block
+        width: 55px
+        height: 55px
+        background-color:  #fff 
+        border-radius: 50%
+        img
+            transform: translateY(25%)
 .green_bg
     padding: 50px 0
     background: linear-gradient(90deg, #0A662D 0%, #163F2E 100%)
@@ -188,3 +206,198 @@ h2
         justify-content: center
         width: 100%
         max-width: 100px
+
+.price_container
+    padding: 80px 0 70px
+    h2
+        padding-bottom: 30px
+        text-align: center 
+.card
+    padding: 10px 10px 30px
+    border: 1px solid #D6D6D6
+    figcaption
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+        align-items: center
+
+.card_content
+    h3
+        padding: 12px 0 20px
+        font-size: 20px
+        font-weight: 700
+        text-align: center
+    p
+        margin-bottom: 17px
+    b
+        color: #000
+        font-weight: 500
+    a
+        max-width: 130px
+        margin: 0 auto
+        text-transform: none
+.expert
+    min-height: 55px
+    
+.price_container_card
+    padding: 10px 0 30px
+    text-align: center
+    font-size: 15px
+    font-weight: 600
+    b
+        font-size: 32px
+
+.price_container
+    .green_btn
+        a
+            max-width: 310px
+
+.price_btn_container
+    > div
+        flex-wrap: wrap
+    div
+        &:first-child
+            padding: 30px 0 30px
+        &:last-child
+            padding-bottom: 40px
+    a
+        display: block
+        width: 100%
+        max-width: 225px
+        padding: 21px 20px
+        border-radius: 50px
+        border: 1px solid #D6D6D6
+        text-align: center
+        transition: all 0.5s ease
+        &:hover
+            color: #F99B38
+            border: 1px solid #F99B38
+        span
+            &:first-child
+                display: block
+                font-size: 16px
+                font-weight: 500
+                text-decoration: underline
+            &:last-child
+                font-size: 15px
+                font-weight: 400
+                b
+                    padding-top: 5px
+                    font-size: 20px
+                    font-weight: 600
+
+    
+.reviews_container,
+.info_container,
+.price_container
+    padding: 80px 20px 70px
+    h2
+        padding-bottom: 30px
+        text-align: center 
+.reviews_container
+    padding-right: 35px
+    padding-left: 35px
+.more_reviews
+    text-align: right
+    padding-bottom: 45px
+    font-weight: 400
+    text-decoration: underline
+    a
+        &:hover
+            color: #80C936
+            text-shadow: 0 0 1px #80C936
+
+.img-comment
+    border: 1px solid #D6D6D6
+    border-radius: 20px
+    img
+        object-fit: cover
+        width: 100%
+
+.left.slider_navigation,
+.right.slider_navigation
+    position: absolute
+    top: 50%
+    border: 20px solid transparent
+    transform: translateY(-50%)
+    cursor: pointer
+
+.left.slider_navigation
+    left: -50px
+    border-right-color: #D9D9D9
+
+.right.slider_navigation
+    right: -50px
+    border-left-color: #D9D9D9
+
+.btn_group
+    display: block
+    a
+        min-width: 280px
+        font-size: 15px
+    div
+        margin-bottom: 15px
+    +media(768)
+        display: flex
+        margin-bottom: 0
+.footer
+    flex-wrap: wrap
+    margin-bottom: 50px
+    div
+        +media(768)
+            padding: 0 30rem
+    h3
+        font-weight: 700
+        text-transform: uppercase
+        padding-bottom: 36px
+        min-height: 40px
+        // max-width: 280px
+        text-align: center
+
+div.central_block 
+    padding: 0
+    ul
+        padding-bottom: 24px 
+
+.social_footer
+    li
+        margin-bottom: 10px
+    a
+        gap: 10rem
+        transition: all 0.5s ease
+        &:hover
+            color: #80C936
+            text-shadow: 0 0 1px #80C936
+.social_footer,
+.menu_block
+    +media(768)
+        border-left: 1px solid rgba(214, 214, 214, 0.87)
+        border-right: 1px solid rgba(214, 214, 214, 0.87)
+
+.menu_block
+    grid-column: span 2
+    +media(1024)
+        grid-column: span 1
+    nav
+        gap: 70px
+    a
+        color: #000
+        line-height: 1.7em
+        text-decoration-line: underline
+        transition: all 0.5s ease
+        &:hover
+            color: #80C936
+            text-shadow: 0 0 1px #80C936
+.social_icons_block_2
+    a
+        transition: all 0.5s ease
+        &:hover
+            transform: scale(1.1)
+            filter: drop-shadow( 0 0 1px rgba(140, 192, 206, 0.8))
+.social_icons_block
+    img
+        transition: all 0.5s ease
+        &:hover
+            transform: scale(1.1)
+            filter: drop-shadow( 0 0 1px rgba(140, 192, 206, 0.8))

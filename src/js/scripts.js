@@ -107,39 +107,71 @@ document.addEventListener("DOMContentLoaded", function () {
     hideAllSections()
     deactivateAllButtons()
 
-    const steps = document.querySelectorAll('.step');
-    const contents = document.querySelectorAll('.step-content');
-    const dots = document.querySelectorAll('.dot');
-    const nextButton = document.querySelector('.next-step-btn');
+    const steps = document.querySelectorAll('.step'),
+        contents = document.querySelectorAll('.step-content'),
+        dots = document.querySelectorAll('.dot'),
+        nextButton = document.querySelector('.next-step-btn'),
+        stepsRight = document.querySelector('.steps-right'),
+        isMobile = () => window.innerWidth < 768;
 
-    function activateStep(stepNum) {
-        steps.forEach((s) => {
-            s.classList.toggle('active', s.dataset.step === stepNum);
-        });
+    const originalOrder = Array.from(contents);
 
-        contents.forEach((c) => {
-            c.classList.toggle('active', c.dataset.step === stepNum);
-        });
+    function moveContentsMobile() {
+        if (!isMobile()) return;
 
-        dots.forEach((d) => {
-            d.classList.toggle('active', d.dataset.step === stepNum);
+        steps.forEach(step => {
+            const stepNum = step.dataset.step;
+            const content = document.querySelector(`.step-content[data-step="${stepNum}"]`);
+
+            // перемістити контент одразу після кроку
+            if (content && step.nextElementSibling !== content) {
+                step.parentNode.insertBefore(content, step.nextElementSibling);
+            }
         });
     }
 
-    steps.forEach((step) => {
+    function restoreContentsDesktop() {
+        if (isMobile()) return;
+
+        contents.forEach(content => {
+            if (!stepsRight.contains(content)) {
+                stepsRight.appendChild(content);
+            }
+        });
+    }
+
+    function activateStep(stepNum) {
+        steps.forEach(s => s.classList.toggle('active', s.dataset.step === stepNum));
+        contents.forEach(c => c.classList.toggle('active', c.dataset.step === stepNum));
+        dots.forEach(d => d.classList.toggle('active', d.dataset.step === stepNum));
+    }
+
+    steps.forEach(step => {
         step.addEventListener('click', () => {
             const selected = step.dataset.step;
             activateStep(selected);
         });
     });
 
-    nextButton.addEventListener('click', () => {
-        const current = [...steps].findIndex((s) => s.classList.contains('active'));
-        if (current < steps.length - 1) {
-            const nextStep = steps[current + 1].dataset.step;
-            activateStep(nextStep);
-        }
+    nextButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const current = [...steps].findIndex(s => s.classList.contains('active'));
+        const nextIndex = (current + 1) % steps.length;
+        const nextStep = steps[nextIndex].dataset.step;
+        activateStep(nextStep);
     });
+
+    function handleResponsiveSteps() {
+        if (isMobile()) {
+            moveContentsMobile();
+        } else {
+            restoreContentsDesktop();
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', handleResponsiveSteps);
+    window.addEventListener('resize', handleResponsiveSteps);
+
 
 
     let isSlideTransitionComplete = true;
