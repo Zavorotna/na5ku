@@ -77,9 +77,11 @@ h2
         grid-template-columns: repeat(4, 1fr)
 
 .wrapper
-    max-width: 1140px
+    width: 90%
     margin: 0 auto
     padding: 0 15rem
+    +media(1440)
+        max-width: 1140px
 
 .main_container
     flex-wrap: wrap
@@ -291,14 +293,15 @@ h2
 .info_container,
 .price_container,
 .about_us_container
-    padding: 80px 20rem 70px
+    padding: 80px 0 70px
     h2
         padding-bottom: 30px
         text-align: center 
+
 .reviews_container,
 .steps-container
-    padding-right: 35px
-    padding-left: 35px
+    padding-right: 30rem
+    padding-left: 30rem
 .more_reviews
     text-align: right
     padding-bottom: 45px
@@ -318,19 +321,22 @@ h2
 
 .left.slider_navigation,
 .right.slider_navigation
+    display: none !important
     position: absolute
     top: 50%
-    border: 20px solid transparent
-    transform: translateY(-50%)
+    border: 20rem solid transparent
+    transform: translateY(-50%) rotate(-180deg)
     cursor: pointer
+    +media(768)
+        display: block !important
 
 .left.slider_navigation
     left: -50px
-    border-right-color: #D9D9D9
+    border-left-color: #D9D9D9
 
 .right.slider_navigation
     right: -50px
-    border-left-color: #D9D9D9
+    border-right-color: #D9D9D9
 
 .btn_group
     display: block
@@ -419,6 +425,13 @@ div.central_block
     border-radius: 20px
     transform: translate(-50%, -50%)
     z-index: 7
+.cancel_img
+    position: absolute
+    top: 0
+    right: -30px
+    svg
+        path
+            transform: translate(28%, 28%)
 
 .popup_img
     width: 85%

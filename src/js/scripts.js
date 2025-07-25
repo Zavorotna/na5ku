@@ -384,12 +384,14 @@ document.addEventListener("DOMContentLoaded", function () {
         this.prevBtnSlider.onclick = () => {
           if (isClickUnabled) {
             this.changeSlide("left");
+            renderReviews()
             clickUnabled();
           }
         };
         this.nextBtnSlider.onclick = () => {
           if (isClickUnabled) {
             this.changeSlide("right");
+            renderReviews()
             clickUnabled();
           }
         };
@@ -536,9 +538,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const comment = new InfinitySlider(".slider-comment", {
     isArrows: true,
     isSlidesToScrollAll: false,
-    baseCardWidth: "200px",
-    gap: 30,
-    isAutoplay: true,
+    baseCardWidth: "190px",
+    gap: 20,
+    isAutoplay: false,
     autoplaySpeed: 3000,
     transitionCard: "all 1s ease-in-out",
   });
