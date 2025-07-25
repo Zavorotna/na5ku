@@ -26,30 +26,38 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault()
             cancelBurger()
         })
-        dark.addEventListener("click", cancelBurger)
+        dark.addEventListener("click", function (e) {
+            e.preventDefault()
+            const popupImg = document.querySelector('.popup_img')
+            popupImg.style.display = "none";    
+            cancelBurger()
+        })
     }
 
-    //get more reviews
-    // function renderReviews() {
-    //     const containerReviews = document.querySelector('.reviews_list')
+    // get more reviews
+    function renderReviews() {
+        const commentImg = document.querySelectorAll('.comment-block img')
 
-    //     nextReviews.forEach(reviews => {
-    //         img.addEventListener("click", function () {
-    //             const popupImg = document.querySelector('.popup_img')
-    //             srcPopup = popupImg.querySelector("img")
+        commentImg.forEach(img => {
+            img.addEventListener("click", function () {
+                const popupImg = document.querySelector('.popup_img')
+                srcPopup = popupImg.querySelector("img")
 
-    //             srcPopup.src = this.src;
-    //             dark.style.display = "block"
-    //             popupImg.style.display = "block";
-    //         });
-    //         picture.appendChild(img)
-    //         containerReviews.appendChild(picture)
-    //     })
-    // }
+                srcPopup.src = this.src;
+                dark.style.display = "block"
+                popupImg.style.display = "block";
+            });
+        })
+    }
+    const cancelImg = document.querySelector('.popup_img .cancel_img')
+    cancelImg.addEventListener("click", function (e) {
+        e.preventDefault()  
+        const popupImg = document.querySelector('.popup_img')
+        popupImg.style.display = "none";    
+        dark.style.display = "none"
+    })
 
-
-
-    // renderReviews()
+    renderReviews()
 
 
     // випадаючі блоки з інформацією
@@ -114,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
         stepsRight = document.querySelector('.steps-right'),
         isMobile = () => window.innerWidth < 768;
 
-    const originalOrder = Array.from(contents);
+    // const originalOrder = Array.from(contents);
 
     function moveContentsMobile() {
         if (!isMobile()) return;
@@ -123,7 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const stepNum = step.dataset.step;
             const content = document.querySelector(`.step-content[data-step="${stepNum}"]`);
 
-            // перемістити контент одразу після кроку
             if (content && step.nextElementSibling !== content) {
                 step.parentNode.insertBefore(content, step.nextElementSibling);
             }
@@ -539,5 +546,5 @@ document.addEventListener("DOMContentLoaded", function () {
       window.onresize = function () {
         comment.init()
       }
-  }, 100);
+  }, 500);
 })

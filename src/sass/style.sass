@@ -79,7 +79,7 @@ h2
 .wrapper
     max-width: 1140px
     margin: 0 auto
-    padding: 0 25px
+    padding: 0 15rem
 
 .main_container
     flex-wrap: wrap
@@ -126,7 +126,6 @@ h2
             max-width: 280px
 
 .grid_rating
-    padding-bottom: 50px
     +media(768)
         grid-template-columns: 20% 80%
     h2
@@ -290,8 +289,9 @@ h2
     
 .reviews_container,
 .info_container,
-.price_container
-    padding: 80px 20px 70px
+.price_container,
+.about_us_container
+    padding: 80px 20rem 70px
     h2
         padding-bottom: 30px
         text-align: center 
@@ -334,8 +334,9 @@ h2
 .btn_group
     display: block
     a
-        min-width: 280px
         font-size: 15px
+        +media(768)
+            min-width: 280px
     div
         margin-bottom: 15px
     +media(768)
@@ -344,6 +345,10 @@ h2
 .footer
     flex-wrap: wrap
     margin-bottom: 50px
+    +media(768)
+        grid-template-columns: repeat(2, 1fr)
+    +media(1024)
+        grid-template-columns: repeat(3, 1fr)
     div
         +media(768)
             padding: 0 30rem
@@ -376,7 +381,8 @@ div.central_block
         border-right: 1px solid rgba(214, 214, 214, 0.87)
 
 .menu_block
-    grid-column: span 2
+    +media(768)
+        grid-column: span 2
     +media(1024)
         grid-column: span 1
     nav
@@ -401,3 +407,22 @@ div.central_block
         &:hover
             transform: scale(1.1)
             filter: drop-shadow( 0 0 1px rgba(140, 192, 206, 0.8))
+.popup_img
+    position: fixed
+    top: 50%
+    left: 48%
+    display: none
+    padding: 30rem
+    width: 80vw
+    background-color: #fff
+    border-radius: 20px
+    transform: translate(-50%, -50%)
+    z-index: 7
+
+.popup_img
+    width: 85%
+    img
+        width: 100%
+        object-fit: contain
+        border-radius: 20px
+        max-height: 500px
