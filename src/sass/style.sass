@@ -191,14 +191,15 @@ h2
     padding: 50px 0
     background: linear-gradient(90deg, #0A662D 0%, #163F2E 100%)
     h3
-        max-width: 660px
         color: #FFF
         font-size: 20px
         font-weight: 600
+        +media(768)
+            max-width: 660px
     > div
         justify-content: center
         flex-wrap: wrap
-        +media(768)
+        +media(610)
             justify-content: space-between
             flex-wrap: nowrap
     picture
@@ -297,13 +298,17 @@ h2
     h2
         padding-bottom: 30px
         text-align: center 
-
+.arrow
+    transform: rotate(90deg)
+    +media(438)
+        transform: rotate(0deg)
 .reviews_container,
 .steps-container
     padding-right: 30rem
     padding-left: 30rem
 .more_reviews
     text-align: right
+    padding-top: 20px
     padding-bottom: 45px
     font-weight: 400
     text-decoration: underline
