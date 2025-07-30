@@ -9,9 +9,17 @@ html(lang="uk")
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         link(rel="stylesheet", href="css/styles.css")
         link(rel="shortcut icon", href="img/rat_logo.png", type="image/x-icon")
-
+        //- <!-- Google Tag Manager -->
+        script.
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MHMBJDFS');
+        //- <!-- End Google Tag Manager -->
         title na5ku - Дипломні, курсові, реферати та інші студентські роботи.
     body 
+        //- <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHMBJDFS"height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        //- <!-- End Google Tag Manager (noscript) -->
         .dark-bgc
         include components/mixin
         include components/popup_img
@@ -41,7 +49,7 @@ html(lang="uk")
                                 b Безкоштовні правки 
                                 | і доопрацювання у відповідності з початковим завданням
                     .green_btn 
-                        a(href="https://na5ku.com.ua/uk/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-headbutprice#ctfrm" target="blank") розрахувати вартість
+                        a.link(href="https://na5ku.com.ua/uk/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-headbutprice#ctfrm" target="_blank") розрахувати вартість
                 .img_container 
                     picture 
                         img(src="img/main.png", alt="")
@@ -123,7 +131,7 @@ html(lang="uk")
                         img.arrow(src="img/right-arrow.svg", alt="")
                     .social_container 
                         .green_btn 
-                            a(href="https://na5ku.com.ua/uk/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-maincta#ctfrm" target="blank") оформити замовлення
+                            a.link(href="https://na5ku.com.ua/uk/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-maincta#ctfrm" target="blank") оформити замовлення
                         ul.social.justify-center.gap.items-center.social_icons_block_2
                             li.social_items
                                 a(href="https://t.me/Na5kuBot?start=ZGw6MjgyMDU4" target="_blank")
@@ -147,44 +155,44 @@ html(lang="uk")
                     +cards(cardPrice.dysertacii)
                 .price_btn_container 
                     .justify-center.gap.items-center
-                        a(href="https://na5ku.com.ua/uk/otcheti-po-praktike/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-zvitorder#ctfrm" target="blank") 
+                        a.link(href="https://na5ku.com.ua/uk/otcheti-po-praktike/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-zvitorder#ctfrm" target="blank") 
                             span Звіти з практики
                             span від 
                                 b 1000 
                                 | грн
-                        a(href="https://na5ku.com.ua/uk/prakticheskaya-rabota/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-praktorder#ctfrm" target="blank") 
+                        a.link(href="https://na5ku.com.ua/uk/prakticheskaya-rabota/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-praktorder#ctfrm" target="blank") 
                             span Практичні роботи
                             span від 
                                 b 300 
                                 | грн
-                        a(href="https://na5ku.com.ua/uk/laboratornaya-rabota/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-labaorder#ctfrm" target="blank") 
+                        a.link(href="https://na5ku.com.ua/uk/laboratornaya-rabota/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-labaorder#ctfrm" target="blank") 
                             span Лабораторні роботи
                             span від 
                                 b 350 
                                 | грн
-                        a(href="https://na5ku.com.ua/uk/nauchnaya-statya/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-sciorder#ctfrm" target="blank") 
+                        a.link(href="https://na5ku.com.ua/uk/nauchnaya-statya/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-sciorder#ctfrm" target="blank") 
                             span Наукові статті
                             span від 
                                 b 1000 
                                 | грн
                     .justify-center.gap
-                        a(href="https://na5ku.com.ua/uk/esse/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-eseorder#ctfrm" target="blank") 
+                        a.link(href="https://na5ku.com.ua/uk/esse/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-eseorder#ctfrm" target="blank") 
                             span Есе
                             span від 
                                 b 250 
                                 | грн
-                        a(href="https://na5ku.com.ua/uk/kontrolnie-raboti/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-controrder#ctfrm" target="blank") 
+                        a.link(href="https://na5ku.com.ua/uk/kontrolnie-raboti/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-controrder#ctfrm" target="blank") 
                             span Контрольні роботи
                             span від 
                                 b 150 
                                 | грн
-                        a(href="https://na5ku.com.ua/uk/problem-solving/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-taskorder#ctfrm" target="blank") 
+                        a.link(href="https://na5ku.com.ua/uk/problem-solving/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-taskorder#ctfrm" target="blank") 
                             span Рішення задач
                             span від 
                                 b 110 
                                 | грн
                 .green_btn 
-                    a(href="https://na5ku.com.ua/uk/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-pricebutprice#ctfrm" target="blank") дізнатися точну вартість
+                    a.link(href="https://na5ku.com.ua/uk/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-pricebutprice#ctfrm" target="blank") дізнатися точну вартість
             include components/step
             section.reviews_container.wrapper
                 h2 Відгуки
@@ -211,12 +219,12 @@ html(lang="uk")
                                 picture
                                     img(src="img/comment1.png" alt="")
                 p.more_reviews
-                    a(href="https://na5ku.com.ua/uk/otzyivyi/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-allrev" target="blank") Більше відгуків
+                    a.link(href="https://na5ku.com.ua/uk/otzyivyi/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-allrev" target="blank") Більше відгуків
                 .flex.justify-center.items-center.gap.btn_group
                     .green_btn 
-                        a(href="https://na5ku.com.ua/uk/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-revprice#ctfrm" target="blank") дізнатися вартість
+                        a.link(href="https://na5ku.com.ua/uk/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-revprice#ctfrm" target="blank") дізнатися вартість
                     .button.transparent_btn 
-                        a(href="https://na5ku.com.ua/uk/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-revorder#ctfrm") оформити замовлення
+                        a.link(href="https://na5ku.com.ua/uk/?ref_id=10011857&utm_source=google_adwords&utm_medium=ppc&utm_campaign=LAND-revorder#ctfrm") оформити замовлення
             section.info_container.wrapper.container#info
                 h2 FAQ
                 include components/information

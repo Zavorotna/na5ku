@@ -551,4 +551,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let sliderInterval = setTimeout(function () {
         comment.init()
     }, 500);
+
+    //gclid gtm url param
+    const urlParams = new URLSearchParams(window.location.search),
+        gclid = urlParams.get('gclid') || localStorage.getItem('gclid')
+
+    if (urlParams.get('gclid')) {
+        localStorage.setItem('gclid', urlParams.get('gclid'))
+    }
+
+    if (!gclid) return
+
+    document.querySelectorAll('.link').forEach(link => {
+        const url = new URL(link.href)
+        url.searchParams.set('gclid', gclid)
+        link.href = url.toString()
+    })
 })
