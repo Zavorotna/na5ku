@@ -550,7 +550,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     let sliderInterval = setTimeout(function () {
         comment.init()
-    }, 500);
+    }, 1000);
 
     //gclid gtm url param
     const urlParams = new URLSearchParams(window.location.search),
